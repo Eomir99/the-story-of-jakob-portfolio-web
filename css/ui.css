@@ -86,21 +86,50 @@
   gap: clamp(8px, 1.5vw, 22px);
 }
 
-/* Both images share the same proportions and click-target width. */
+/* Both controls use the same plaque and metallic lettering finish. */
 .title-button {
-  display: block;
+  position: relative;
+  display: grid;
+  place-items: center;
   width: clamp(94px, 21cqw, 250px);
+  aspect-ratio: 480 / 138;
   padding: 0;
-  background: none;
+  background: url("../assets/ui/title-button-plaque.webp") center / 100% 100% no-repeat;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-.title-buttons img {
-  display: block;
-  width: 100%;
-  height: auto;
+.title-button-label {
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+  font: 900 clamp(10px, 1.92cqw, 24px)/1 Georgia, "Times New Roman", serif;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-shadow: none;
+  transform: translateY(-7%);
+  filter: drop-shadow(0 1px #a74203) drop-shadow(0 2px #361509)
+    drop-shadow(1px 0 #361509) drop-shadow(-1px 0 #361509) drop-shadow(0 -1px #361509);
+}
+
+.title-button-label > span {
+  background: linear-gradient(#fff9ba 4%, #ffe879 29%, #ffce3f 54%, #ff9b0b 78%, #f67705 96%);
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0.65px #fff1a3;
+  paint-order: stroke fill;
+}
+
+#start-button .title-button-label {
+  font-size: clamp(16px, 2.65cqw, 35px);
+  letter-spacing: -0.05em;
+  transform: translateY(-10%);
+}
+
+.title-button-initial {
+  font-size: 1.3em;
 }
 
 .title-button:hover {
@@ -110,7 +139,20 @@
 
 .title-button:focus-visible {
   outline: none;
-  filter: brightness(1.12) drop-shadow(0 0 2px #fff) drop-shadow(0 0 9px #ffc85a);
+}
+
+.title-button:focus-visible::after {
+  position: absolute;
+  inset: auto 40% 0;
+  height: 2px;
+  background: #fff0ad;
+  box-shadow: 0 0 3px #2e1108;
+  content: "";
+}
+
+@media (forced-colors: active) {
+  .title-button:focus-visible { outline: 2px solid Highlight; }
+  .title-button-label > span { color: ButtonText; }
 }
 
 /* Greyed out until the asset manifest has loaded (task 4.2). */

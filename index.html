@@ -10,7 +10,7 @@
     <title>The Story of Jakob</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/ui.css?v=title-art">
+    <link rel="stylesheet" href="./css/ui.css?v=matched-title-buttons">
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
@@ -41,8 +41,10 @@
 
           <div class="title-actions">
             <div class="title-buttons">
-              <button id="start-button" class="title-button" type="button" disabled><img src="./assets/ui/start-button.webp?v=title-art" alt="Start" width="480" height="138"></button>
-              <a class="title-button" href="./portfolio.html"><img src="./assets/ui/to-portfolio-button.webp" alt="To Portfolio" width="480" height="138"></a>
+              <button id="start-button" class="title-button" type="button" aria-label="Start" disabled>
+                <span class="title-button-label" aria-hidden="true"><span class="title-button-initial">S</span><span>TART</span></span>
+              </button>
+              <a class="title-button" href="./portfolio.html"><span class="title-button-label"><span>To Portfolio</span></span></a>
             </div>
             <!--
               Task 4.2: title renders immediately, Start stays disabled
