@@ -86,65 +86,11 @@
   gap: clamp(8px, 1.5vw, 22px);
 }
 
-/* Echo the Start artwork's stepped gold trim and outlined display serif. */
+/* Both images share the same proportions and click-target width. */
+#start-button,
 .title-portfolio-link {
-  --plaque-shape: polygon(0 50%, 7% 23%, 13% 23%, 13% 10%, 87% 10%, 87% 23%, 93% 23%, 100% 50%, 93% 77%, 87% 77%, 87% 90%, 13% 90%, 13% 77%, 7% 77%);
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  place-items: center;
-  padding: 0.8em 1.45em;
-  min-height: 44px;
-  white-space: nowrap;
-  color: #ffdd88;
-  font: 900 clamp(13px, 1.75cqw, 24px)/1 Georgia, serif;
-  font-variant: small-caps;
-  text-decoration: none;
-  text-shadow: 0 2px #7b3109, 1px 0 #2e1108, -1px 0 #2e1108, 0 -1px #2e1108, 0 3px #1d0b07;
-  filter: drop-shadow(0 2px #1d0b07) drop-shadow(0 0 5px #fab95855);
-  transition: transform 0.12s ease, filter 0.12s ease;
-}
-
-.title-portfolio-link::before,
-.title-portfolio-link::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  clip-path: var(--plaque-shape);
-  pointer-events: none;
-}
-
-.title-portfolio-link::before {
-  inset: 0;
-  background: linear-gradient(#fff1b6 12%, #ffbf42 38%, #a64b0f 58%, #ffbc38 86%);
-}
-
-.title-portfolio-link::after {
-  inset: 4px 7px;
-  background: linear-gradient(#6b2d15, #341509 46%, #190d0b 51%, #511e0f);
-}
-
-.title-portfolio-link:hover,
-.title-portfolio-link:focus-visible {
-  transform: scale(1.05);
-  filter: brightness(1.14) drop-shadow(0 2px #1d0b07) drop-shadow(0 0 10px #ffc85a99);
-}
-
-.title-portfolio-link:focus-visible {
-  outline: 2px solid #fff0bf;
-  outline-offset: 2px;
-}
-
-@container (max-width: 440px) {
-  .title-buttons #start-button { min-width: 94px; }
-  .title-portfolio-link { min-height: 36px; padding-inline: 1.2em; }
-}
-
-/* The Start button is the author's art (assets/ui/start-button.webp);
-   the button itself is only the click target around it. */
-#start-button {
-  width: 18%;
-  min-width: 150px;
+  display: block;
+  width: clamp(94px, 21cqw, 250px);
   padding: 0;
   background: none;
   border: none;
@@ -152,21 +98,22 @@
   transition: transform 0.12s ease, filter 0.12s ease;
 }
 
-#start-button img {
+.title-buttons img {
   display: block;
   width: 100%;
   height: auto;
 }
 
 #start-button:hover,
-#start-button:focus-visible {
+.title-portfolio-link:hover {
   transform: scale(1.05);
   filter: brightness(1.12) drop-shadow(0 0 10px rgba(255, 200, 90, 0.6));
-  outline: none;
 }
 
-#start-button:focus-visible {
-  filter: brightness(1.12) drop-shadow(0 0 10px rgba(255, 200, 90, 0.6)) drop-shadow(0 0 2px #fff);
+#start-button:focus-visible,
+.title-portfolio-link:focus-visible {
+  outline: none;
+  filter: brightness(1.12) drop-shadow(0 0 2px #fff) drop-shadow(0 0 9px #ffc85a);
 }
 
 /* Greyed out until the asset manifest has loaded (task 4.2). */
