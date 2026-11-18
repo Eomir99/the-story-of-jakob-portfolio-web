@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Jakob Larsson — Business, economics and games. Research, experience and AI-assisted game and app projects.">
+<title>Jakob Larsson — Portfolio</title>
+<link rel="icon" href="data:,">
+<script>if(new URLSearchParams(location.search).get('from')==='game'||location.hash==='#from-game')document.documentElement.classList.add('from-game');</script>
+<link rel="stylesheet" href="./css/portfolio.css">
+<script type="module" src="./js/portfolio.js"></script>
+</head>
+<body>
+<main class="pf-root" id="portfolio" tabindex="-1" aria-label="Jakob Larsson portfolio">
+
+<header style="position: absolute; top: 0; left: 0; right: 0; z-index: 3; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 16px; padding: 24px clamp(24px, 5vw, 72px); background: linear-gradient(#1B1C20 55%, rgba(27,28,32,0))">
+<button class="pf-nav" data-go="0" aria-label="Go to homepage" style="background: none; border: 0; padding: 8px 0; min-height: 44px; cursor: pointer; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #D7B06A">JL</button>
+<nav style="display: flex; gap: 2px; flex-wrap: wrap">
+
+<button class="pf-nav" data-go="1" style="background: none; border: 0; padding: 12px 10px; min-height: 44px; cursor: pointer; font-family: Inter, sans-serif; font-size: 14px; color: #A3A1A8; transition: color .3s">Story</button>
+
+<button class="pf-nav" data-go="2" style="background: none; border: 0; padding: 12px 10px; min-height: 44px; cursor: pointer; font-family: Inter, sans-serif; font-size: 14px; color: #A3A1A8; transition: color .3s">Education</button>
+
+<button class="pf-nav" data-go="4" style="background: none; border: 0; padding: 12px 10px; min-height: 44px; cursor: pointer; font-family: Inter, sans-serif; font-size: 14px; color: #A3A1A8; transition: color .3s">Experience</button>
+
+<button class="pf-nav" data-go="5" style="background: none; border: 0; padding: 12px 10px; min-height: 44px; cursor: pointer; font-family: Inter, sans-serif; font-size: 14px; color: #A3A1A8; transition: color .3s">Projects</button>
+
+<button class="pf-nav" data-go="6" style="background: none; border: 0; padding: 12px 10px; min-height: 44px; cursor: pointer; font-family: Inter, sans-serif; font-size: 14px; color: #A3A1A8; transition: color .3s">Contact</button>
+
+</nav>
+</header>
+
+<div style="position: absolute; right: clamp(8px, 2vw, 32px); top: 50%; transform: translateY(-50%); z-index: 3; display: flex; flex-direction: column">
+
+<button class="pf-dot" aria-label="Go to Home" data-go="0" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 26px; background: #D7B06A; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+<button class="pf-dot" aria-label="Go to My story" data-go="1" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 6px; background: #4A4D55; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+<button class="pf-dot" aria-label="Go to Education" data-go="2" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 6px; background: #4A4D55; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+<button class="pf-dot" aria-label="Go to Bachelor’s thesis" data-go="3" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 6px; background: #4A4D55; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+<button class="pf-dot" aria-label="Go to Experience" data-go="4" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 6px; background: #4A4D55; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+<button class="pf-dot" aria-label="Go to Projects" data-go="5" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 6px; background: #4A4D55; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+<button class="pf-dot" aria-label="Go to Contact" data-go="6" style="width: 44px; height: 44px; background: none; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0">
+<span style="display: block; width: 6px; border-radius: 3px; height: 6px; background: #4A4D55; transition: height .4s ease, background .4s ease"></span>
+</button>
+
+</div>
+
+<div class="pf-track" style="position: absolute; inset: 0; transform: translateY(0%); transition: transform 1s cubic-bezier(.77,0,.18,1)">
+
+<!-- 0 · INTRO -->
+<section
+id="home" data-section="0" aria-label="Home" style="height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: flex; flex-direction: column; gap: 28px; max-width: 980px; opacity: 1; transform: translateY(0px); transition: opacity .8s ease .35s, transform .8s ease .35s">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #A3A1A8">Portfolio · Business × Games</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(56px, 10vw, 140px); line-height: .95; letter-spacing: -0.045em; color: #E9E7E2">Jakob<br><span style="color: #D7B06A">Larsson.</span></h1>
+<p style="margin: 0; max-width: 640px; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.6; color: #B9B7BE">Business &amp; economics graduate with research on the video game industry, building my own games and apps with AI.</p>
+</div>
+<div style="margin-top: auto; padding-top: 48px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap">
+<button class="pf-btn" data-next style="display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid #3A3D45; background: #23252A; color: #E9E7E2; font-family: Inter, sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: border-color .25s">
+Enter
+<svg class="pf-bob" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #D7B06A"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+</button>
+<span style="font-size: 14px; color: #8E8C94">or scroll · press ↵</span>
+</div>
+</section>
+
+<!-- 1 · MY STORY -->
+<section
+id="story" data-section="1" aria-label="My story" style="height: 100vh; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(40px, 6vw, 96px); max-width: 1180px; opacity: 0; transform: translateY(40px); transition: opacity .8s ease .45s, transform .8s ease .45s">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #D7B06A">01 — My story</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.08; letter-spacing: -0.03em">Curious about games. <span style="color: #D7B06A">Fascinated by the business behind them.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #B9B7BE">I’ve been passionate about video games for as long as I can remember. Over time, that passion grew into a curiosity about the industry itself: why games succeed, how their business models work, and what keeps players engaged.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #B9B7BE">That curiosity led me to study international business, research the games industry, and start developing my own projects using AI. Now I’m looking to bring those interests together professionally.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; justify-content: center">
+<span style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #8E8C94">The questions that drive me</span>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; gap: 18px; align-items: baseline; padding: 22px 0; border-top: 1px solid #2E3036"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; color: #D7B06A; width: 28px; flex: none">01</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 500; letter-spacing: -0.01em">Why do games succeed?</span></div>
+<div style="display: flex; gap: 18px; align-items: baseline; padding: 22px 0; border-top: 1px solid #2E3036"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; color: #D7B06A; width: 28px; flex: none">02</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 500; letter-spacing: -0.01em">How do their business models work?</span></div>
+<div style="display: flex; gap: 18px; align-items: baseline; padding: 22px 0; border-top: 1px solid #2E3036; border-bottom: 1px solid #2E3036"><span style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; color: #D7B06A; width: 28px; flex: none">03</span><span style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 500; letter-spacing: -0.01em">What keeps players engaged?</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 2 · EDUCATION -->
+<section
+id="education" data-section="2" aria-label="Education" style="height: 100vh; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: flex; flex-direction: column; gap: 40px; max-width: 1180px; width: 100%; opacity: 0; transform: translateY(40px); transition: opacity .8s ease .45s, transform .8s ease .45s">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #D7B06A">02 — Education</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; letter-spacing: -0.03em">Business foundations. <span style="color: #D7B06A">A gaming perspective.</span></h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 20px">
+
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; border: 1px solid #2E3036; background: #212328">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
+<span style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 12px; background: #FFFFFF; box-sizing: border-box"><img src="./assets/portfolio/gothenburg-logo.webp" alt="School of Business, Economics and Law" style="display: block; height: 50px; width: auto"></span>
+<span style="font-size: 13px; color: #8E8C94">2023 – 2026</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">BSc in Business &amp; Economics</span>
+<span style="font-size: 15px; line-height: 1.5; color: #B9B7BE">School of Business, Economics and Law, University of Gothenburg</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #3A3D45; font-size: 13px">Business Administration</span>
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #3A3D45; font-size: 13px">International Business</span>
+</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 1px solid #2E3036">
+<span style="font-size: 14px; font-weight: 500; color: #D7B06A">Triple Crown accredited</span>
+<span style="font-size: 13px; color: #8E8C94">EQUIS · AACSB · AMBA</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; border: 1px solid #2E3036; background: #212328">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
+<img src="./assets/portfolio/south-carolina-logo.webp" alt="University of South Carolina" style="display: block; width: 56px; height: 56px; border-radius: 12px">
+<span style="font-size: 13px; color: #8E8C94">2025 · Exchange</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">International Exchange</span>
+<span style="font-size: 15px; line-height: 1.5; color: #B9B7BE">Darla Moore School of Business, University of South Carolina</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #3A3D45; font-size: 13px">GPA 4.0 / 4.0</span>
+</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 1px solid #2E3036">
+<span style="font-size: 14px; font-weight: 500; color: #D7B06A">#1 in undergraduate international business</span>
+<span style="font-size: 13px; color: #8E8C94">U.S. News &amp; World Report</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 16px; border: 1px solid #2E3036; background: #212328">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px">
+<img src="./assets/portfolio/lund-logo.webp" alt="LTH, Faculty of Engineering, Lund University" style="display: block; width: 56px; height: 56px; border-radius: 12px">
+<span style="font-size: 13px; color: #8E8C94">2026</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">Programming in Python</span>
+<span style="font-size: 15px; line-height: 1.5; color: #B9B7BE">LTH, Lund University</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #3A3D45; font-size: 13px">5 ECTS</span>
+</div>
+<div style="margin-top: auto; display: flex; flex-direction: column; gap: 4px; padding-top: 14px; border-top: 1px solid #2E3036">
+<span style="font-size: 14px; font-weight: 500; color: #D7B06A">Additional studies</span>
+<span style="font-size: 13px; color: #8E8C94">Distance course</span>
+</div>
+</div>
+
+</div>
+<button class="pf-btn" data-next style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1px solid #3A3D45; background: #23252A; color: #E9E7E2; font-family: Inter, sans-serif; font-size: 15px; font-weight: 500; cursor: pointer; transition: border-color .25s">
+View my bachelor’s thesis
+<svg class="pf-bob" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: #D7B06A"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+</button>
+</div>
+</section>
+
+<!-- 3 · BACHELOR'S THESIS -->
+<section
+id="thesis" data-section="3" aria-label="Bachelor’s thesis" style="height: 100vh; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: flex; flex-wrap: wrap; align-items: center; gap: clamp(40px, 6vw, 96px); max-width: 1180px; opacity: 0; transform: translateY(40px); transition: opacity .8s ease .45s, transform .8s ease .45s">
+
+<a class="pf-doc" href="./assets/docs/jakob-larsson-thesis.pdf" target="_blank" rel="noopener" aria-label="Open the thesis PDF" style="flex: 0 1 370px; min-width: 240px; position: relative; display: block; aspect-ratio: 1 / 1.414; text-decoration: none; margin: 0 auto 32px">
+<span aria-hidden="true" style="position: absolute; inset: 0; border-radius: 6px; background: #3A3C43; transform: rotate(-6deg) translate(-14px, 8px)"></span>
+<img src="./assets/portfolio/thesis-page.webp" alt="" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 4px; transform: rotate(3deg) translate(12px, 4px); filter: brightness(.82)">
+<img class="pf-page" src="./assets/portfolio/thesis-cover.webp" alt="Cover page of the thesis" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 4px; box-shadow: 0 30px 60px rgba(0,0,0,.45); transition: transform .45s cubic-bezier(.2,.8,.2,1)">
+<span class="pf-open" style="position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; min-height: 40px; padding: 0 16px; border-radius: 999px; background: #26282E; border: 1px solid #3A3D45; color: #E9E7E2; font-size: 13px; font-weight: 500">Open PDF <span style="color: #D7B06A">↗</span></span>
+</a>
+
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #D7B06A">03 — Bachelor’s thesis</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(26px, 2.8vw, 38px); line-height: 1.14; letter-spacing: -0.025em">The Strategic Importance of Product Adaptation in the Video Game Industry</h2>
+<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 18px; line-height: 1.5; color: #D7B06A">How do video game companies balance globally standardized products with the different preferences, regulations and expectations of international markets?</p>
+<div style="display: flex; flex-direction: column; padding-top: 4px">
+<div style="display: flex; flex-direction: column; gap: 5px; padding: 15px 0; border-top: 1px solid #2E3036">
+<span style="font-size: 16px; font-weight: 600">Global products, local adjustments.</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">Rather than developing fundamentally different games for each market, companies tend to adapt localization, monetization, marketing and selected content.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; padding: 15px 0; border-top: 1px solid #2E3036">
+<span style="font-size: 16px; font-weight: 600">More than translation.</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">Localization increasingly forms part of broader product strategy, influenced by consumer preferences, player engagement and ongoing development.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px; padding: 15px 0; border-top: 1px solid #2E3036; border-bottom: 1px solid #2E3036">
+<span style="font-size: 16px; font-weight: 600">A constantly evolving process.</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">Regulatory requirements, platform ecosystems and changing player behavior make international adaptation an ongoing challenge.</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 13px; line-height: 1.5">
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="color: #8E8C94">Co-author</span><span style="color: #D3D1D6">Axel Abrahamsson</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="color: #8E8C94">Method</span><span style="color: #D3D1D6">10 industry interviews</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="color: #8E8C94">Theory</span><span style="color: #D3D1D6">I-R framework · Localization</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="color: #8E8C94">Published</span><span style="color: #D3D1D6">Spring 2026</span></span>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- 4 · EXPERIENCE -->
+<section
+id="experience" data-section="4" aria-label="Experience" style="height: 100vh; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: flex; flex-direction: column; gap: 36px; max-width: 1180px; width: 100%; opacity: 0; transform: translateY(40px); transition: opacity .8s ease .45s, transform .8s ease .45s">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px clamp(32px, 5vw, 72px); align-items: end">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #D7B06A">04 — Experience</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.05; letter-spacing: -0.03em">From analysis <span style="color: #D7B06A">to execution.</span></h2>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #B9B7BE">My experience spans business consulting projects, sales, administration and operational monitoring. Across these roles, I’ve worked with market research, strategic recommendations, customer relationships and practical problem-solving.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(32px, 5vw, 72px)">
+<div style="display: flex; flex-direction: column">
+<span style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #8E8C94; padding-bottom: 12px">Selected business projects</span>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-top: 1px solid #2E3036">
+<span style="font-size: 17px; font-weight: 600">Product Launch Campaign — Breakthru Beverage</span>
+<span style="font-size: 13px; color: #D7B06A">University consulting project · 2025</span>
+<span style="font-size: 15px; line-height: 1.6; color: #B9B7BE">Analyzed target customers and competitive positioning for a new product launch in South Carolina. Developed a marketing campaign and presented go-to-market recommendations based on local market conditions.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-top: 1px solid #2E3036; border-bottom: 1px solid #2E3036">
+<span style="font-size: 17px; font-weight: 600">Risk Management Analysis — University of South Carolina</span>
+<span style="font-size: 13px; color: #D7B06A">University consulting project · 2025</span>
+<span style="font-size: 15px; line-height: 1.6; color: #B9B7BE">Led a risk assessment project for a university building, coordinating the analysis and delivering a written report with recommendations.</span>
+</div>
+</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #8E8C94; padding-bottom: 12px">Professional experience</span>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-top: 1px solid #2E3036">
+<span style="font-size: 17px; font-weight: 600">Administrator — Skåne University Hospital</span>
+<span style="font-size: 15px; line-height: 1.6; color: #B9B7BE">Supported daily operations at the Eye Clinic in Malmö, managing administrative responsibilities and interacting with patients in sometimes challenging situations.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-top: 1px solid #2E3036">
+<span style="font-size: 17px; font-weight: 600">Sales Manager — Candell UF</span>
+<span style="font-size: 15px; line-height: 1.6; color: #B9B7BE">Managed customer acquisition, relationships, pricing and sales tracking in a student-run business. The company received the Annual Report of the Year award in Skåne.</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 0; border-top: 1px solid #2E3036; border-bottom: 1px solid #2E3036">
+<span style="font-size: 17px; font-weight: 600">Instrument Controller — Siemens Healthineers</span>
+<span style="font-size: 15px; line-height: 1.6; color: #B9B7BE">Monitored medical instruments through remote systems, identifying and reporting operational deviations.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 5 · PROJECTS -->
+<section
+id="projects" data-section="5" aria-label="Projects" style="height: 100vh; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: flex; flex-direction: column; gap: 36px; max-width: 1240px; width: 100%; opacity: 0; transform: translateY(40px); transition: opacity .8s ease .45s, transform .8s ease .45s">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 20px clamp(32px, 5vw, 72px); align-items: end">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #D7B06A">05 — Projects &amp; creations</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.05; letter-spacing: -0.03em">Ideas into playable <span style="color: #D7B06A">and practical projects.</span></h2>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #B9B7BE">I’ve been exploring how AI-assisted development can turn ideas into working products. Rather than approaching these as a traditional programmer, I’ve focused on concept development, design decisions, guiding AI coding agents, testing and iteration.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 18px">
+
+<button class="pf-card" data-project="0" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 0; padding: 0; border-radius: 16px; border: 1px solid #2E3036; background: #212328; color: #E9E7E2; font-family: Inter, sans-serif; cursor: pointer; overflow: hidden; transition: border-color .25s, background .25s">
+<img loading="lazy" decoding="async" src="./assets/portfolio/roblox-class-lineup.webp" alt="" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; background: #2A2C32; border-bottom: 1px solid #2E3036">
+<span style="display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 22px">
+<span style="font-size: 13px; color: #8E8C94">Multiplayer RPG prototype · Roblox Studio</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">Roblox Dungeon Crawler</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">A co-op dungeon crawler built around distinct combat roles and challenging bosses.</span>
+<span style="padding-top: 6px; font-size: 14px; font-weight: 500; color: #D7B06A">See more <span class="pf-arrow">→</span></span>
+</span>
+</button>
+
+<button class="pf-card" data-project="1" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 0; padding: 0; border-radius: 16px; border: 1px solid #2E3036; background: #212328; color: #E9E7E2; font-family: Inter, sans-serif; cursor: pointer; overflow: hidden; transition: border-color .25s, background .25s">
+<img loading="lazy" decoding="async" src="./assets/portfolio/story-start.webp" alt="" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; background: #2A2C32; border-bottom: 1px solid #2E3036">
+<span style="display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 22px">
+<span style="font-size: 13px; color: #8E8C94">Interactive CV game · JavaScript</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">The Story of Jakob</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">A browser platformer that turns my education and experience into a playable story.</span>
+<span style="padding-top: 6px; font-size: 14px; font-weight: 500; color: #D7B06A">See more <span class="pf-arrow">→</span></span>
+</span>
+</button>
+
+<button class="pf-card" data-project="2" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 0; padding: 0; border-radius: 16px; border: 1px solid #2E3036; background: #212328; color: #E9E7E2; font-family: Inter, sans-serif; cursor: pointer; overflow: hidden; transition: border-color .25s, background .25s">
+<img loading="lazy" decoding="async" src="./assets/portfolio/day-by-day-today.webp" alt="" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; background: #2A2C32; border-bottom: 1px solid #2E3036">
+<span style="display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 22px">
+<span style="font-size: 13px; color: #8E8C94">Personal planning web app</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">Day by Day</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">Exploring how AI and automation can simplify everyday planning.</span>
+<span style="padding-top: 6px; font-size: 14px; font-weight: 500; color: #D7B06A">See more <span class="pf-arrow">→</span></span>
+</span>
+</button>
+
+<button class="pf-card" data-project="3" style="display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 0; padding: 0; border-radius: 16px; border: 1px solid #2E3036; background: #212328; color: #E9E7E2; font-family: Inter, sans-serif; cursor: pointer; overflow: hidden; transition: border-color .25s, background .25s">
+<img loading="lazy" decoding="async" src="./assets/portfolio/formation-battlefield.webp" alt="" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center top; background: #2A2C32; border-bottom: 1px solid #2E3036">
+<span style="display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 22px">
+<span style="font-size: 13px; color: #8E8C94">Tower defense game · Godot</span>
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2">Formation Defense</span>
+<span style="font-size: 14px; line-height: 1.6; color: #B9B7BE">A strategy prototype built around troop formations, classes and abilities.</span>
+<span style="padding-top: 6px; font-size: 14px; font-weight: 500; color: #D7B06A">See more <span class="pf-arrow">→</span></span>
+</span>
+</button>
+
+</div>
+</div>
+</section>
+
+<!-- 6 · CONTACT -->
+<section
+id="contact" data-section="6" aria-label="Contact" style="height: 100vh; box-sizing: border-box; overflow-y: auto; display: flex; flex-direction: column; justify-content: center; padding: 112px clamp(24px, 8vw, 140px) 56px">
+<div class="pf-reveal" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(40px, 6vw, 96px); max-width: 1180px; width: 100%; opacity: 0; transform: translateY(40px); transition: opacity .8s ease .45s, transform .8s ease .45s">
+<div style="display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: #D7B06A">06 — Contact</p>
+<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(44px, 6vw, 84px); line-height: 1; letter-spacing: -0.04em">The next <span style="color: #D7B06A">chapter.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.7; color: #B9B7BE">I’m looking for opportunities to combine my business background with my passion for the video game industry.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<span style="padding: 9px 15px; border-radius: 999px; border: 1px solid #34363D; font-size: 14px">Market research</span>
+<span style="padding: 9px 15px; border-radius: 999px; border: 1px solid #34363D; font-size: 14px">Business analysis</span>
+<span style="padding: 9px 15px; border-radius: 999px; border: 1px solid #34363D; font-size: 14px">Publishing</span>
+<span style="padding: 9px 15px; border-radius: 999px; border: 1px solid #34363D; font-size: 14px">Strategy</span>
+<span style="padding: 9px 15px; border-radius: 999px; border: 1px solid #34363D; font-size: 14px">Product</span>
+</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; color: #B9B7BE">For spring 2027, I’m exploring opportunities to contribute before my planned master’s studies in the autumn. Whether there’s a suitable opportunity or simply a chance to exchange ideas about the industry, I’d be happy to connect.</p>
+</div>
+<div style="display: flex; flex-direction: column; justify-content: center">
+<div style="display: flex; flex-direction: column; gap: 28px; padding: clamp(28px, 3vw, 40px); border-radius: 20px; background: #212328; border: 1px solid #2E3036">
+<span style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 3.2vw, 44px); font-weight: 600; letter-spacing: -0.03em">Let’s talk.</span>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: #8E8C94">Email</span>
+<a href="mailto:jakob.h.larsson@hotmail.com" style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(18px, 1.9vw, 24px); font-weight: 500; text-decoration: none; color: #D7B06A; word-break: break-all">jakob.h.larsson@hotmail.com</a>
+</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap">
+<a class="pf-btn" href="https://www.linkedin.com/in/jakob-larsson-434626279/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid #3A3D45; color: #E9E7E2; text-decoration: none; font-size: 15px; transition: border-color .25s">LinkedIn <span style="color: #D7B06A">↗</span></a>
+<a class="pf-btn" href="./assets/docs/jakob-larsson-cv.pdf" download style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid #3A3D45; color: #E9E7E2; text-decoration: none; font-size: 15px; transition: border-color .25s">Download CV <span style="color: #D7B06A">↓</span></a>
+</div>
+<span style="font-size: 14px; color: #8E8C94">Hjärup, Sweden</span>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+
+</main>
+<div class="gi-root" id="game-intro" aria-label="Game complete" tabindex="-1" style="position: absolute; inset: 0; z-index: 50; box-sizing: border-box; display: flex; flex-direction: column; padding: 28px clamp(24px, 8vw, 140px) 40px; background: #16171A; color: #E9E7E2; font-family: Inter, system-ui, sans-serif; transform: translateY(0%); transition: transform 1.05s cubic-bezier(.77,0,.18,1)">
+
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; min-height: 44px">
+<span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em; color: #D7B06A">JL</span>
+<span style="font-family: Silkscreen, monospace; font-size: 12px; letter-spacing: .08em; color: #8E8C94">The Story of Jakob → Portfolio</span>
+</div>
+
+<div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 30px; max-width: 920px; padding: 40px 0">
+<div class="gi-1" style="display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: Silkscreen, monospace; font-size: 14px; letter-spacing: .14em; color: #D7B06A">Game complete<span class="gi-caret">_</span></span>
+<span class="gi-bar" style="display: block; width: 160px; height: 2px; background: #D7B06A"></span>
+</div>
+<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: clamp(44px, 7.4vw, 104px); line-height: 1.02; letter-spacing: -0.04em">
+<span class="gi-2" style="display: block; color: #A3A1A8">The game ends here.</span>
+<span class="gi-3" style="display: block; color: #D7B06A">The real challenge begins.</span>
+</h1>
+<p class="gi-4" style="margin: 0; max-width: 620px; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.65; color: #B9B7BE">You’ve seen the journey that brought me here. Now comes the next step: turning my passion for games and background in business into something real.</p>
+<div class="gi-5" style="display: flex; align-items: center; gap: 18px; flex-wrap: wrap; padding-top: 6px">
+<button class="gi-btn" id="explore-portfolio" style="display: inline-flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 0; background: #D7B06A; color: #1B1C20; font-family: Inter, sans-serif; font-size: 16px; font-weight: 600; cursor: pointer; transition: background .25s">
+Explore my portfolio
+<svg class="gi-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+</button>
+<span style="font-size: 14px; color: #8E8C94">or scroll · press ↵</span>
+</div>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 20px; border-top: 1px solid #2A2C32; font-size: 13px; color: #8E8C94">
+<span>Jakob Larsson · Business × Games</span>
+<span style="font-family: Silkscreen, monospace; font-size: 11px; letter-spacing: .08em">Next: Portfolio</span>
+</div>
+
+</div>
+<dialog id="project-dialog" class="pf-modal" aria-labelledby="project-title">
+<div class="project-heading"><div><p id="project-kind" class="eyebrow"></p><h2 id="project-title"></h2><div id="project-description"></div></div><button class="pf-btn circle" data-close-project aria-label="Close project">×</button></div>
+<div id="project-shots" class="project-shots"></div>
+<p class="gallery-hint">Click a screenshot to enlarge it.</p>
+<footer class="project-footer"><a id="play-game" class="pf-btn" href="./index.html" hidden>Play The Story of Jakob ↗</a><span>Esc to close</span></footer>
+</dialog>
+<dialog id="screenshot-dialog" class="screenshot-dialog" aria-label="Screenshot viewer">
+<button class="pf-btn circle screenshot-close" data-close-screenshot aria-label="Close screenshot">×</button>
+<img id="enlarged-screenshot" alt="">
+<div class="screenshot-controls"><button class="pf-btn circle" id="previous-screenshot" aria-label="Previous screenshot">‹</button><span id="screenshot-caption" aria-live="polite"></span><button class="pf-btn circle" id="next-screenshot" aria-label="Next screenshot">›</button></div>
+</dialog>
+<noscript><style>.pf-root{height:auto!important;overflow:visible!important}.pf-track{position:static!important;transform:none!important}.pf-track>section{height:auto!important;min-height:100vh}.pf-reveal{opacity:1!important;transform:none!important}.gi-root{display:none!important}.from-game .pf-root{visibility:visible!important}</style><p>Please enable JavaScript to use section navigation and screenshot galleries. <a href="./assets/docs/jakob-larsson-cv.pdf">Download CV</a></p></noscript>
+</body></html>

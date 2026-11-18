@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Private application link, not a public site -- stays out of
+         search results permanently, not just until launch. See also
+         robots.txt. -->
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Story of Jakob</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/ui.css">
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="viewport">
+      <canvas id="game" width="1280" height="720" aria-label="The Story of Jakob gameplay canvas">
+        Your browser does not support canvas.
+      </canvas>
+
+      <!-- Control copy for the short opening tutorial. Gameplay stays on
+           canvas; the words stay sharp in the DOM at every window size. -->
+      <div id="tutorial-hints" class="tutorial-hints" hidden aria-label="Opening controls">
+        <span>Move with A and D<br>or arrow keys</span>
+        <span>Jump with Space</span>
+        <span>Shoot with F or<br>left click</span>
+      </div>
+
+      <!--
+        Real DOM title screen (PLAN.md task 4.1), replacing game.js's
+        placeholder. AGENTS.md §5: menus are never drawn on canvas. Shown/
+        hidden by ui.js; the Start button hands off to game.js.
+      -->
+      <div id="title-screen" class="dom-screen title-screen">
+        <div class="title-content">
+          <!-- The title is painted into the title art (assets/ui/
+               title-screen.webp); these stay for screen readers. -->
+          <h1 class="visually-hidden">The Story of Jakob</h1>
+          <p class="visually-hidden">An interactive CV — a short playable journey through my education and experience.</p>
+
+          <div class="title-actions">
+            <div class="title-buttons">
+              <button id="start-button" type="button" disabled><img src="./assets/ui/start-button.webp" alt="Start" width="480" height="134"></button>
+              <a class="title-portfolio-link" href="./portfolio.html"><span>Go to Portfolio</span></a>
+            </div>
+            <!--
+              Task 4.2: title renders immediately, Start stays disabled
+              and this shows a percentage until the asset manifest
+              (assets.js) has loaded. aria-live so a screen reader
+              announces when it's ready without the page moving focus.
+            -->
+            <p id="loading-status" class="loading-status" aria-live="polite">
+              Loading… <span id="loading-percent">0%</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        Real DOM comic viewer (PLAN.md task 4.3; task 2, playtest round 2,
+        switched it from one-panel-at-a-time to a stacking read). Advancing
+        appends another panel frame to #comic-panel-list and smoothly
+        scrolls it into view -- earlier panels stay put, scrolled up.
+        comics.js owns building each panel's frame/bubbles from
+        comic-data.js; #comic-scroll is the only element that scrolls, so
+        .comic-hint (a direct child of #comic-screen, not of the scrolling
+        region) stays fixed on screen throughout. Shown/hidden by ui.js in
+        lockstep with game.js's state.
+      -->
+      <div id="comic-screen" class="dom-screen comic-screen" hidden>
+        <div id="comic-scroll" class="comic-scroll">
+          <div id="comic-panel-list" class="comic-panel-list"></div>
+        </div>
+        <p class="comic-hint">Click or press Space to continue</p>
+      </div>
+
+      <!--
+        The utspring title card (PLAN.md task 3.5). Narrative copy, so it
+        is DOM and not canvas (AGENTS.md §5) -- reusing this same UI layer
+        rather than drawing text into the game. "studentmössa" is never
+        translated (AGENTS.md §3); the gloss beside it is.
+
+        game.js drives both `hidden` and `opacity` from simulation time,
+        so the hold and the fade freeze and resume with the rest of the
+        game when the tab is hidden -- a CSS transition would keep running
+        while the simulation was paused. pointer-events stay off in the
+        stylesheet so it can never sit in front of the persistent controls.
+      -->
+      <div id="studentmossa-card" class="studentmossa-card" hidden>
+        <p class="studentmossa-card-title">Studentmössa</p>
+        <p class="studentmossa-card-body">Swedish graduation cap. Earned, not given.</p>
+      </div>
+
+      <!--
+        Focus/visibility hint (PLAN.md task 3.10). The simulation freezes
+        whenever the window loses focus, and one line over the frozen
+        frame is what keeps a stopped game reading as "waiting for you"
+        rather than "crashed". It used to be drawn on the canvas, which
+        AGENTS.md §5 does not allow -- canvas renders gameplay only, and
+        this is UI copy. game.js owns when it shows; ui.js owns the
+        element.
+
+        Not a pause menu (task 3.10 forbids one) and not interactive:
+        pointer-events stay off in the stylesheet so the click that
+        dismisses it reaches the canvas and restores focus, exactly as it
+        did before.
+      -->
+      <div id="resume-hint" class="resume-hint" hidden>
+        <p class="resume-hint-text">Click to resume</p>
+      </div>
+
+      <!--
+        The Clinic reception's "Try again / Skip this round" choice
+        (reception.js). Appears only after the same round has been failed
+        twice in a row, so nobody can be stuck there (AGENTS.md §2). A
+        choice is UI, so it is DOM (AGENTS.md §5); reception.js owns when
+        it shows, ui.js owns the element.
+      -->
+      <div id="reception-choice" class="reception-choice" hidden>
+        <p class="reception-choice-text">Busy day at the front desk.</p>
+        <div class="reception-choice-actions">
+          <button id="reception-retry" class="reception-choice-button" type="button">Try again</button>
+          <button id="reception-skip" class="reception-choice-button" type="button">Skip this round</button>
+        </div>
+      </div>
+
+      <!--
+        The Clinic reception's Retry (reception.js): after a failed Round 3
+        the arena opens up and play simply continues -- this small,
+        optional button is for anyone who wants another go, and disappears
+        once they walk on past the desk. Deliberately low-key, like the
+        persistent controls; it must never read as "you have to do this".
+      -->
+      <button id="reception-retry-final" class="reception-retry-final" type="button" hidden>Retry the front desk</button>
+
+      <!--
+        Persistent controls (PLAN.md task 4.4, AGENTS.md §5): Skip to
+        application and Mute/Unmute, present during gameplay and comics.
+        Last in #viewport so it paints above both the canvas and the
+        comic screen without needing a z-index. Hidden on the title
+        screen, which already has its own Skip link. Not a settings menu
+        -- these two controls are the entire out-of-game UI.
+      -->
+      <!-- Skip to application sits alone in the bottom-left corner; volume
+           and mute in the bottom-right. The title screen shows only Start. -->
+      <div id="persistent-controls" class="persistent-controls" hidden>
+        <a class="persistent-control skip-control" href="./portfolio.html">Go to Portfolio</a>
+        <label class="persistent-control volume-control">
+          Volume
+          <input id="volume-slider" type="range" min="0" max="100" step="5" value="100" aria-label="Music volume">
+        </label>
+        <button id="mute-button" class="persistent-control" type="button">Mute</button>
+      </div>
+    </div>
+
+    <!--
+      Mobile fallback (PLAN.md task 4.8, AGENTS.md §6: "No mobile
+      gameplay... A recruiter on a phone must never see a black canvas").
+      Pure CSS, no JS dependency, so it can never fail open into a blank
+      or broken page: style.css shows this and hides #viewport under
+      `@media (pointer: coarse)`, the standard signal for a touch-primary
+      device. application.html already doubles as the mobile fallback
+      destination (task 4.7), so this is just the explanation plus one
+      link there, not a second copy of its content.
+    -->
+    <div id="mobile-fallback">
+      <div class="mobile-fallback-content">
+        <h1>The Story of Jakob</h1>
+        <p>
+          This is a browser game, played with a keyboard — it needs a
+          desktop or laptop.
+        </p>
+        <p>On mobile, explore my portfolio directly:</p>
+        <a class="mobile-fallback-cta" href="./portfolio.html">Open the portfolio</a>
+      </div>
+    </div>
+  </body>
+</html>
