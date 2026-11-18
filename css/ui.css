@@ -87,8 +87,7 @@
 }
 
 /* Both images share the same proportions and click-target width. */
-#start-button,
-.title-portfolio-link {
+.title-button {
   display: block;
   width: clamp(94px, 21cqw, 250px);
   padding: 0;
@@ -104,14 +103,12 @@
   height: auto;
 }
 
-#start-button:hover,
-.title-portfolio-link:hover {
+.title-button:hover {
   transform: scale(1.05);
   filter: brightness(1.12) drop-shadow(0 0 10px rgba(255, 200, 90, 0.6));
 }
 
-#start-button:focus-visible,
-.title-portfolio-link:focus-visible {
+.title-button:focus-visible {
   outline: none;
   filter: brightness(1.12) drop-shadow(0 0 2px #fff) drop-shadow(0 0 9px #ffc85a);
 }

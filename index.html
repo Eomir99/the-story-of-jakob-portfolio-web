@@ -10,7 +10,7 @@
     <title>The Story of Jakob</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/ui.css">
+    <link rel="stylesheet" href="./css/ui.css?v=title-art">
     <script type="module" src="./js/main.js"></script>
   </head>
   <body>
@@ -41,8 +41,8 @@
 
           <div class="title-actions">
             <div class="title-buttons">
-              <button id="start-button" type="button" disabled><img src="./assets/ui/start-button.webp" alt="Start" width="480" height="138"></button>
-              <a class="title-portfolio-link" href="./portfolio.html"><img src="./assets/ui/to-portfolio-button.webp" alt="To Portfolio" width="480" height="138"></a>
+              <button id="start-button" class="title-button" type="button" disabled><img src="./assets/ui/start-button.webp?v=title-art" alt="Start" width="480" height="138"></button>
+              <a class="title-button" href="./portfolio.html"><img src="./assets/ui/to-portfolio-button.webp" alt="To Portfolio" width="480" height="138"></a>
             </div>
             <!--
               Task 4.2: title renders immediately, Start stays disabled
@@ -142,8 +142,6 @@
         screen, which already has its own Skip link. Not a settings menu
         -- these two controls are the entire out-of-game UI.
       -->
-      <!-- Skip to application sits alone in the bottom-left corner; volume
-           and mute in the bottom-right. The title screen shows only Start. -->
       <div id="persistent-controls" class="persistent-controls" hidden>
         <a class="persistent-control skip-control" href="./portfolio.html">Go to Portfolio</a>
         <label class="persistent-control volume-control">
