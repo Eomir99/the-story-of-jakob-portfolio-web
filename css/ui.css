@@ -115,6 +115,8 @@
 }
 
 .title-button-label > span {
+  /* Leave room for the serif overhang at the edges of the gradient. */
+  padding-inline: 0.045em;
   /* Put the orange within the capital letters' painted area. */
   background: linear-gradient(180deg, #fff4b8 13%, #ffdc60 34%, #ffb528 52%, #f6810b 71%, #e46107 90%);
   background-clip: text;
@@ -125,7 +127,7 @@
 
 #start-button .title-button-label {
   font-size: clamp(16px, 2.65cqw, 35px);
-  letter-spacing: -0.05em;
+  letter-spacing: normal;
   transform: translateY(-10%);
 }
 
