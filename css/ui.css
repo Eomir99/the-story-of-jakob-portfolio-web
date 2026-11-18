@@ -115,10 +115,11 @@
 }
 
 .title-button-label > span {
-  background: linear-gradient(#fff9ba 4%, #ffe879 29%, #ffce3f 54%, #ff9b0b 78%, #f67705 96%);
+  /* Put the orange within the capital letters' painted area. */
+  background: linear-gradient(180deg, #fff4b8 13%, #ffdc60 34%, #ffb528 52%, #f6810b 71%, #e46107 90%);
   background-clip: text;
   color: transparent;
-  -webkit-text-stroke: 0.65px #fff1a3;
+  -webkit-text-stroke: 0.5px #fff1a3;
   paint-order: stroke fill;
 }
 
