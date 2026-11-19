@@ -116,8 +116,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .pf-track { height: var(--pf-height); }
 .pf-track > section { height: var(--pf-height) !important; min-width: 0; overflow-x: hidden; overflow-y: auto; justify-content: flex-start !important; overscroll-behavior-y: contain; scrollbar-gutter: stable both-edges; scrollbar-width: thin; scrollbar-color: #4a4d55 transparent; }
 .pf-reveal { flex-shrink: 0; width: 100%; margin: auto; }
-#home .pf-reveal { margin-block: 0; align-items: center; text-align: center; }
-.pf-home-actions { justify-content: center; flex-shrink: 0; }
+#home .pf-reveal, .pf-home-actions { max-width: 1180px; }
+#home .pf-reveal { margin-block: 0; }
+.pf-home-actions { width: 100%; margin-inline: auto; flex-shrink: 0; }
 .pf-dot[aria-current="true"] span { height: 26px !important; background: var(--pf-accent) !important; }
 .pf-nav[aria-current="true"] { color: #e9e7e2 !important; }
 .gi-root { display: none !important; height: var(--pf-height); overflow-y: auto; }
