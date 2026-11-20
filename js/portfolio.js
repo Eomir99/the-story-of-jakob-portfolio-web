@@ -102,6 +102,7 @@ function openProject(i, opener) {
   const project = PROJECTS[i];
   document.querySelector('#project-title').textContent = project.title;
   document.querySelector('#project-kind').textContent = project.kind;
+  document.querySelector('#project-status').textContent = project.status;
   document.querySelector('#project-description').replaceChildren(...project.body.map(text => {
     const paragraph = document.createElement('p');
     paragraph.textContent = text;
