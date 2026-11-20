@@ -181,3 +181,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
  .gi-content { gap: 20px !important; padding: 24px 0 !important; }
  .gi-root h1 { font-size: clamp(44px, 5.6vw, 76px) !important; }
 }
+
+/* Honest project status tag (cards + project dialog). */
+.pf-status { align-self: flex-start; display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid #3A3D45; font-size: 12px; line-height: 1.4; letter-spacing: .02em; color: #D3D1D6; }
+.project-heading .pf-status { margin-bottom: 14px; }

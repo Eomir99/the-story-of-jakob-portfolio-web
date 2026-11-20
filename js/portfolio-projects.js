@@ -3,6 +3,7 @@ export const PROJECTS = [
   {
     "kind": "Multiplayer RPG prototype · Roblox Studio",
     "title": "Roblox Dungeon Crawler",
+    "status": "In development · Not released",
     "blurb": "A co-op dungeon crawler built around distinct combat roles and challenging bosses.",
     "body": [
       "A cooperative dungeon crawler designed around distinct combat roles, challenging boss encounters and progression through increasingly complex dungeons.",
@@ -36,6 +37,7 @@ export const PROJECTS = [
   {
     "kind": "Interactive CV game · JavaScript",
     "title": "The Story of Jakob",
+    "status": "Playable",
     "blurb": "A browser platformer that turns my education and experience into a playable story.",
     "body": [
       "The game behind this portfolio. A short browser-based platformer that transforms my education and experiences into a playable story, complete with combat, bosses, environments and comic-style sequences.",
@@ -65,6 +67,7 @@ export const PROJECTS = [
   {
     "kind": "Personal planning web app",
     "title": "Day by Day",
+    "status": "Personal tool · Not public",
     "blurb": "Exploring how AI and automation can simplify everyday planning.",
     "body": [
       "An ongoing project exploring how AI and automation can simplify everyday planning.",
@@ -94,6 +97,7 @@ export const PROJECTS = [
   {
     "kind": "Tower defense game · Godot",
     "title": "Formation Defense",
+    "status": "Early prototype · Not released",
     "blurb": "A strategy prototype built around troop formations, classes and abilities.",
     "body": [
       "A strategy game prototype built around troop formations, character classes, abilities and interacting combat systems.",
